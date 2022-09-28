@@ -15,6 +15,7 @@
 		CE23280528B75D7C0093E1C2 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE23280428B75D7C0093E1C2 /* NetworkManager.swift */; };
 		CE23280728B75EEE0093E1C2 /* Company.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE23280628B75EEE0093E1C2 /* Company.swift */; };
 		CE3BE3E128E4444000B2B40F /* Extension+UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3BE3E028E4444000B2B40F /* Extension+UIView.swift */; };
+		CE3BE3E328E45AD600B2B40F /* Extension+Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3BE3E228E45AD600B2B40F /* Extension+Color.swift */; };
 		CED3E6E928B7955A00F4B804 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED3E6E828B7955A00F4B804 /* TableViewCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +30,7 @@
 		CE23280428B75D7C0093E1C2 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		CE23280628B75EEE0093E1C2 /* Company.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Company.swift; sourceTree = "<group>"; };
 		CE3BE3E028E4444000B2B40F /* Extension+UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UIView.swift"; sourceTree = "<group>"; };
+		CE3BE3E228E45AD600B2B40F /* Extension+Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+Color.swift"; sourceTree = "<group>"; };
 		CED3E6E828B7955A00F4B804 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -104,6 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				CE3BE3E028E4444000B2B40F /* Extension+UIView.swift */,
+				CE3BE3E228E45AD600B2B40F /* Extension+Color.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -185,6 +188,7 @@
 				CED3E6E928B7955A00F4B804 /* TableViewCell.swift in Sources */,
 				CE23280728B75EEE0093E1C2 /* Company.swift in Sources */,
 				CE2327F028B756E30093E1C2 /* SceneDelegate.swift in Sources */,
+				CE3BE3E328E45AD600B2B40F /* Extension+Color.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
