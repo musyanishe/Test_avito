@@ -18,15 +18,15 @@ enum NetworkError: Error {
     case decodingError
 }
 
-protocol NetworkManagerImplementation {
-    func fetchData(from url: String?, with completion: @escaping(Result<Company, NetworkError>) -> Void)
-}
-
-class NetworkManager: NetworkManagerImplementation {
+class NetworkManager {
     
-    func fetchData(from url: String?, with completion: @escaping(Result<Company, NetworkError>) -> Void) {
+    static let shared = NetworkManager()
+    
+    private init() {}
+    
+    func fetch<T: Decodable>(dataType: T.Type, from url: String, completion: @escaping(Result<T, NetworkError>) -> Void) {
         
-        guard let url = URL(string: url ?? "") else {
+        guard let url = URL(string: url) else {
             completion(.failure(.invalidURL))
             return
         }
@@ -38,15 +38,18 @@ class NetworkManager: NetworkManagerImplementation {
                 return
             }
             
+            if let httpStatus = response as? HTTPURLResponse, httpStatus.statusCode != 200 {
+                    print("HTTPStatus is \(httpStatus)")
+            }
+            
             do {
-                let company = try JSONDecoder().decode(Company.self, from: data)
+                let type = try JSONDecoder().decode(T.self, from: data)
                 DispatchQueue.main.async {
-                    completion(.success(company))
+                    completion(.success(type))
                 }
             } catch {
                 completion(.failure(.decodingError))
             }
-
         }.resume()
     }
     
